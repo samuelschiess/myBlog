@@ -5,6 +5,12 @@
 	"description": "A template for creating a blog with Astro",
 	"author": "danielcgilibert",
 	"license": "GPL-3.0-only",
+	"pnpm": {
+		"overrides": {
+			"react": "^18.3.1",
+			"react-dom": "^18.3.1"
+		}
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/danielcgilibert/blog-template"
