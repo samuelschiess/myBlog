@@ -12,7 +12,7 @@ interface SiteConfig {
 export const siteConfig: SiteConfig = {
 	site: 'https://blog-template-gray.vercel.app/', // Write here your website url
 	author: 'Samuel Schiess', // Site author
-	title: 'Machine Learning and More', // Site title.
+	title: 'Samuel Schiess', // Site title.
 	description: 'Yet another blog out there on the world-wide-web.', // Description to display in the meta tags
 	lang: 'en-GB',
 	ogLocale: 'en_GB',

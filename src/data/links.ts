@@ -1,4 +1,4 @@
-import TwitterIcon from '@/components/icons/TwitterIcon'
+import TwitterIcon from '@/components/icons/XIcon'
 import GithubIcon from '@/components/icons/GithubIcon'
 
 // ADD YOUR SOCIAL NETWORKS HERE
@@ -11,7 +11,7 @@ export const SOCIALNETWORKS = [
 
 	{
 		name: 'Twitter',
-		url: 'https://github.com/danielcgilibert/blog-template',
+		url: 'https://x.com/SamSchiess/',
 		icon: TwitterIcon
 	}
 ] as const

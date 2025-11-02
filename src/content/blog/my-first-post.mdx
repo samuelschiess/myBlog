@@ -2,29 +2,67 @@
 heroImage: /src/assets/images/20250713_060824(3).png
 category: Machine Learning
 description: Introduction
-pubDate: 2025-10-30T06:00:00.000Z
+pubDate: 2025-12-01T06:00:00.000Z
 draft: false
 tags:
   - Hello
   - WGU
   - Machine Learning
   - AI
-title: 'My First Post: Hello!'
+  - Masters Degree
+title: 'Band Teacher to AI'
 ---
 
 **_An Introduction to my blog_**
 
-My name is Sam Schiess, and I'm currently working on my Master of Science, Computer Science, Artificial Intelligence and Machine Learning at WGU (say that 10 times fast!) I'm starting this blog to document my learning journey, reinforce learned concepts by talking about them, and also just to have fun. Read more to learn about me and my studies!
+Two years ago I was a school band teacher. Today, I hold a senior-level role in financial IT while pursuing an MS in AI at WGU. If you're pivoting careers, or wondering how AI applies to complex financial workflows, this blog is for you.
+
+My name is Sam Schiess, currently working on my Masters of Science, Computer Science, Artificial Intelligence and Machine Learning at WGU (say that 10 times fast!) I'm starting this blog to document my learning journey, reinforce learned concepts by talking about them, and also just to have fun. Read more to learn about me and my studies!
 
 _My Career Until Now:_
 
-- I am a Senior IT Specialist at the University of Utah, focusing on financial technology, managing third-party software (like Jaggaer and Nelnet). For this role, I also act as a delegated developr building forms and workflows in ServiceNow.
-- I haven't always done IT - I actually used to be a school band teacher! I realized pretty quickly that full time teaching wasn't for me, but I still love music, and teaching (in small doses)
-- Pivoting my career looked daunting at first, but I got some Comptia certifications, made a ton of job applications, and soon got a job as a help desk technician. Soon after, I got my current role at the University of Utah. The job I have now felt completely unachievable a few years ago, but reaching it has boosted my confidence - I feel like I can do anything now!
+- I am a Senior IT Specialist at the University of Utah, focusing on financial technology, managing third-party software (like Jaggaer and Nelnet). For this role, I also act as a delegated developer building forms and workflows in ServiceNow.
+- I haven't always done IT - I actually used to be a school band teacher! I realized pretty quickly that full time teaching wasn't for me, but I still love music, and teaching (in small doses).
+- Pivoting my career looked daunting at first, but I got some Comptia certifications, made a ton of job applications, and soon got a job as a help desk technician. Soon after, I got my current role at the University of Utah. The job I have now felt completely unachievable a few years ago, but reaching it has boosted my confidence. I feel like I can do anything now!
+
+_What I'm Doing Today:_
+
+- I've been learning ML with TensorFlow. Eventually I want to apply my models to problems at my work, such as invoice capture, and predicting late payments. [You can see a simple CNN I've built here](https://colab.research.google.com/drive/1i6jAggqSNBh7lTUgReOKk71ethe8Q6Hc?usp=sharing).
+- There's a lot that needs to be done to make this model useful. More data, data augmentation, an automated data pipeline, and tons more. I'm excited to practice these things in my degree program!
+
+```python
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Conv2D, MaxPool2D, Flatten, Dense
+
+# Create our model
+model_4 = Sequential([
+    Conv2D(10, 3, activation='relu', input_shape=(256, 256, 3)),
+    Conv2D(10, 3, activation='relu'),
+    MaxPool2D(),
+    Conv2D(10, 3, activation='relu'),
+    Conv2D(10, 3, activation='relu'),
+    MaxPool2D(),
+    Flatten(),
+    Dense(1, activation='sigmoid')
+])
+
+# Compile the model
+model_4.compile(loss="binary_crossentropy",
+                optimizer=tf.keras.optimizers.Adam(),
+                metrics=["accuracy"])
+
+# Fit the model
+history_4 = model_4.fit(train_data_augmented,
+                        epochs=100,
+                        steps_per_epoch=len(train_data),
+                        validation_data=test_data,
+                        validation_steps=len(test_data))
+```
 
 _My Aspirations Going Forward:_
 
-- The AI Dream: I am fascinated by the progress of AI - and want to work with it directly. I don't think we've scratched the surface of what these new transformer models can really do for us, and I want to be part of that discovery process.
+- The AI Dream: I am fascinated by the progress of AI, and want to work with it directly. I don't think we've scratched the surface of what these new transformer models can really do for us, and I want to be part of that discovery process.
 - Specific Roles: I am considering a range of roles, such as Machine Learning Engineer, MLOps, or AI Solutions Architect.
 - A Love of Learning: I love learning new things and quickly get bored at work when I don't have enough new things to learn. I don't think that will be a problem working with AI. I've spent so much time learning about neural nets and back propagation and TensorFlow on YouTube and Udemy, yet there's still so much I want to learn.
 - The Accomplishment of it: I'm excited to have a computer science degree! And a Master's degree! It's an accomplishment I will be proud of, for its own sake. I'm also excited to get past HR filters on job applications.
@@ -32,14 +70,16 @@ _My Aspirations Going Forward:_
 
 _Outside of Work:_
 
-- In my personal time, I cycle between hobbies such as hiking, gardening, cooking, swimming, traveling, and more.
+- In my personal time, I cycle between hobbies such as hiking, gardening, reading, cooking, swimming, traveling, creating music, and more.
+- I have too many hobbies to keep up with them all of the time! They all go through cycles of prominence. Right now my biggest ones are swimming and traveling (I just got back from a trip to Japan!)
+- I am engaged to the most amazing man possible, and I have a cat named "Yamaha" (based on the musical instruments, not the motorcycles)
 
-![](/src/assets/images/original_7a8c69dd-3828-403d-a0a7-c74a4118a90a_20251019_151603.jpg)_Me, my fiance, and our cat_
+![](/src/assets/images/original_7a8c69dd-3828-403d-a0a7-c74a4118a90a_20251019_151603.jpg)_Me, Yamaha, and my fiancé_
 
-_What to Expect from This Blog_
+_What to Expect from This Blog:_
 
-I can't promise too much at this moment. I'm going to figure this out as I go! But expect me to post about concepts I learn at least once a week. Definitely expect me to link to projects I am building on Github. Finally, expect me to reflect on my experiences as an online student.
+Expect to hear from me once per week! While I am working on my Masters, my studies will be the main focus. After graduation? The focus might become project deep dives or the state of the industry. For now, definitely expect me to write about the concepts I learn, my experiences as an online student, and to share projects I am building on Github.
 
-I might also break from routine and post thoughts about anything on my mind!
+I might also break from routine and post any thoughts that are on my mind!
 
-Welcome, and please enjoy!
+Thanks for reading, and here's a cheesy teaser for next week: My hot take on which of my first three classes (Algorithms, Formal Languages, Computer Architecture) will actually matter for ML work--You might be surprised.
